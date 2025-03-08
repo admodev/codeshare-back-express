@@ -1,6 +1,10 @@
+// Environment variables
+import dotenv from "dotenv";
+
+dotenv.config({ path: "../.env" });
+
 // Modules
 import cors from "cors";
-import dotenv from "dotenv";
 import express from "express";
 
 // Config
@@ -9,8 +13,6 @@ import { connectDB } from "./infrastructure/database/mongoose.config";
 
 // Routes
 import routes from "./presentation/routes";
-
-dotenv.config();
 
 const PORT = environment.PORT || 8000;
 const app = express();
